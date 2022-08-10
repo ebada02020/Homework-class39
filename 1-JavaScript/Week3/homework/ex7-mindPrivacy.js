@@ -29,29 +29,10 @@ const employeeRecords = [
   },
 ];
 
-
-
-
-
 // ! Function under test
-function filterPrivateData(array) {
-
-   
-
-  const copy = array.map(function(result) {
-    
-  return {
-    name:result.name,
-    occupation:result.occupation,
-    email:result.email
-  }
-  });
-  return copy
+function filterPrivateData(/* TODO parameter(s) go here */) {
+  // TODO complete this function
 }
-  
-
-
-      
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
