@@ -1,1 +1,39 @@
 /* Write your style here */
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px;
+  width: calc(100% - 41px);
+}
+
+img {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  width: 200px;
+  height: 300px;
+}
+
+li {
+  width: calc(25% - 51px);
+  margin: 15px;
+  padding: 20px;
+  min-width: 350px;
+  display: list-item;
+  text-align: center;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: small;
+}
