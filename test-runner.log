@@ -1,0 +1,432 @@
+2022-09-13 08:50:10 info: ---------------------------------------
+2022-09-13 08:50:10 info: >>> Running Unit Test `ex1-johnWho` <<<
+2022-09-13 08:50:10 info: ---------------------------------------
+2022-09-13 08:50:20 info: All unit tests passed.
+2022-09-13 08:50:33 error: *** Spell Checker Report ***
+
+
+2022-09-13 08:51:02 info: Disclaimer turned off
+2022-09-13 08:51:59 info: -------------------------------------------------
+2022-09-13 08:51:59 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2022-09-13 08:51:59 info: -------------------------------------------------
+2022-09-13 08:52:07 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-checkDoubleDigits.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex2-checkDoubleDigits.test.js
+  checkDoubleDigits
+    ✓ should exist and be executable (3 ms)
+    ✕ should have all TODO comments removed (2 ms)
+    ✓ `checkDoubleDigits` should not contain unneeded console.log calls (2 ms)
+    ✓ should call new Promise() (1 ms)
+    ✓ `resolve()` should be called with a one argument (1 ms)
+    ✓ `reject()` should be called with a one argument (1 ms)
+    ✓ should be a function that takes a single argument (1 ms)
+    ✓ (9) should return a rejected promise with an Error object (2 ms)
+    ✓ (10) should return a promise that resolves to "This is a double digit number!" (2 ms)
+    ✓ (99) should return a promise that resolves to "This is a double digit number!"
+    ✓ (100) should return a rejected promise with an Error object (29 ms)
+
+  ● checkDoubleDigits › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 10 passed, 11 total
+Snapshots:   0 total
+Time:        1.419 s
+Ran all test suites matching /ex2-checkDoubleDigits.test.js/i.
+2022-09-13 08:52:14 error: *** Spell Checker Report ***
+
+
+2022-09-13 08:53:25 info: -------------------------------------------------
+2022-09-13 08:53:25 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2022-09-13 08:53:25 info: -------------------------------------------------
+2022-09-13 08:53:38 info: All unit tests passed.
+2022-09-13 08:53:58 error: *** Spell Checker Report ***
+
+
+2022-09-13 09:08:08 info: ---------------------------------------
+2022-09-13 09:08:08 info: >>> Running Unit Test `ex3-rollDie` <<<
+2022-09-13 09:08:08 info: ---------------------------------------
+2022-09-13 09:08:14 info: All unit tests passed.
+2022-09-13 09:08:18 error: *** Spell Checker Report ***
+
+
+2022-09-13 09:13:29 info: --------------------------------------------
+2022-09-13 09:13:29 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-09-13 09:13:29 info: --------------------------------------------
+2022-09-13 09:13:35 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    ✓ should exist and be executable (2 ms)
+    ✕ should have all TODO comments removed (2 ms)
+    ✓ `rollDice` should not contain unneeded console.log calls (1 ms)
+    ✓ should use `dice.map()`
+    ✓ should use `Promise.all()`
+    ✓ should resolve when all dice settle successfully (1 ms)
+    ✕ should reject with an Error when a die rolls off the table
+
+  ● ex4-pokerDiceAll › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      63 |
+      64 |   test('should reject with an Error when a die rolls off the table', async () => {
+    > 65 |     expect.assertions(3);
+         |            ^
+      66 |     expect(exported).toBeDefined();
+      67 |
+      68 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0.999);
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:65:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        1.609 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2022-09-13 09:13:40 error: *** Spell Checker Report ***
+
+
+2022-09-13 09:14:03 info: --------------------------------------------
+2022-09-13 09:14:03 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-09-13 09:14:03 info: --------------------------------------------
+2022-09-13 09:14:07 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    ✓ should exist and be executable (2 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ `rollDice` should not contain unneeded console.log calls (1 ms)
+    ✓ should use `dice.map()` (1 ms)
+    ✓ should use `Promise.all()`
+    ✓ should resolve when all dice settle successfully (1 ms)
+    ✕ should reject with an Error when a die rolls off the table (1 ms)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      63 |
+      64 |   test('should reject with an Error when a die rolls off the table', async () => {
+    > 65 |     expect.assertions(3);
+         |            ^
+      66 |     expect(exported).toBeDefined();
+      67 |
+      68 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0.999);
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:65:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        1.019 s, estimated 2 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2022-09-13 09:14:11 error: *** Spell Checker Report ***
+
+
+2022-09-13 09:14:55 info: --------------------------------------------
+2022-09-13 09:14:55 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-09-13 09:14:55 info: --------------------------------------------
+2022-09-13 09:15:01 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    ✓ should exist and be executable (2 ms)
+    ✓ should have all TODO comments removed
+    ✓ `rollDice` should not contain unneeded console.log calls
+    ✓ should use `dice.map()`
+    ✓ should use `Promise.all()` (1 ms)
+    ✕ should resolve when all dice settle successfully (6 ms)
+    ✕ should reject with an Error when a die rolls off the table (3 ms)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    RangeError: Maximum call stack size exceeded
+
+      28 |
+      29 | function rollDice() {
+    > 30 |   const dice = [1, 2, 3, 4, 5];
+         |                ^
+      31 |   const diceMap = dice.map((ele) => {
+      32 |     return rollDice(ele);
+      33 |   });
+
+      at rollDice (3-UsingAPIs/Week1/homework/ex4-pokerDiceAll.js:30:16)
+      at map (3-UsingAPIs/Week1/homework/ex4-pokerDiceAll.js:32:12)
+          at Array.map (<anonymous>)
+      at rollDice (3-UsingAPIs/Week1/homework/ex4-pokerDiceAll.js:31:24)
+      at map (3-UsingAPIs/Week1/homework/ex4-pokerDiceAll.js:32:12)
+          at Array.map (<anonymous>)
+      at rollDice (3-UsingAPIs/Week1/homework/ex4-pokerDiceAll.js:31:24)
+      at map (3-UsingAPIs/Week1/homework/ex4-pokerDiceAll.js:32:12)
+          at Array.map (<anonymous>)
+      at rollDice (3-UsingAPIs/Week1/homework/ex4-pokerDiceAll.js:31:24)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received one assertion call.
+
+      46 |
+      47 |   test('should resolve when all dice settle successfully', async () => {
+    > 48 |     expect.assertions(4);
+         |            ^
+      49 |     expect(exported).toBeDefined();
+      50 |
+      51 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:48:12)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      63 |
+      64 |   test('should reject with an Error when a die rolls off the table', async () => {
+    > 65 |     expect.assertions(3);
+         |            ^
+      66 |     expect(exported).toBeDefined();
+      67 |
+      68 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0.999);
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:65:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        1.096 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2022-09-13 09:15:04 error: *** Spell Checker Report ***
+
+
+2022-09-13 09:15:34 info: --------------------------------------------
+2022-09-13 09:15:34 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-09-13 09:15:34 info: --------------------------------------------
+2022-09-13 09:15:41 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    ✓ should exist and be executable (2 ms)
+    ✓ should have all TODO comments removed
+    ✓ `rollDice` should not contain unneeded console.log calls
+    ✓ should use `dice.map()`
+    ✓ should use `Promise.all()`
+    ✕ should resolve when all dice settle successfully (3 ms)
+    ✕ should reject with an Error when a die rolls off the table (2 ms)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    RangeError: Maximum call stack size exceeded
+
+      28 |
+      29 | function rollDice() {
+    > 30 |   const dice = [1, 2, 3, 4, 5];
+         |                ^
+      31 |   const diceMap = dice.map((ele) => {
+      32 |     rollDice(ele);
+      33 |   });
+
+      at rollDice (3-UsingAPIs/Week1/homework/ex4-pokerDiceAll.js:30:16)
+      at map (3-UsingAPIs/Week1/homework/ex4-pokerDiceAll.js:32:5)
+          at Array.map (<anonymous>)
+      at rollDice (3-UsingAPIs/Week1/homework/ex4-pokerDiceAll.js:31:24)
+      at map (3-UsingAPIs/Week1/homework/ex4-pokerDiceAll.js:32:5)
+          at Array.map (<anonymous>)
+      at rollDice (3-UsingAPIs/Week1/homework/ex4-pokerDiceAll.js:31:24)
+      at map (3-UsingAPIs/Week1/homework/ex4-pokerDiceAll.js:32:5)
+          at Array.map (<anonymous>)
+      at rollDice (3-UsingAPIs/Week1/homework/ex4-pokerDiceAll.js:31:24)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received one assertion call.
+
+      46 |
+      47 |   test('should resolve when all dice settle successfully', async () => {
+    > 48 |     expect.assertions(4);
+         |            ^
+      49 |     expect(exported).toBeDefined();
+      50 |
+      51 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:48:12)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      63 |
+      64 |   test('should reject with an Error when a die rolls off the table', async () => {
+    > 65 |     expect.assertions(3);
+         |            ^
+      66 |     expect(exported).toBeDefined();
+      67 |
+      68 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0.999);
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:65:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        1.05 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2022-09-13 09:15:44 error: *** Spell Checker Report ***
+
+
+2022-09-13 09:16:40 info: --------------------------------------------
+2022-09-13 09:16:40 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-09-13 09:16:40 info: --------------------------------------------
+2022-09-13 09:16:46 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    ✓ should exist and be executable (2 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ `rollDice` should not contain unneeded console.log calls (1 ms)
+    ✓ should use `dice.map()`
+    ✓ should use `Promise.all()` (1 ms)
+    ✓ should resolve when all dice settle successfully (2 ms)
+    ✕ should reject with an Error when a die rolls off the table (1 ms)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      63 |
+      64 |   test('should reject with an Error when a die rolls off the table', async () => {
+    > 65 |     expect.assertions(3);
+         |            ^
+      66 |     expect(exported).toBeDefined();
+      67 |
+      68 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0.999);
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:65:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        1.219 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+/Users/hackyourfuture/Desktop/Hack-Your-Future-Exercise&projects/JavaScript/Homework-class39/3-UsingAPIs/helpers/pokerDiceRoller.js:64
+        reject(new Error(`Die ${die} rolled off the table.\n`));
+               ^
+
+Error: Die 1 rolled off the table.
+
+    at rollOnce (/Users/hackyourfuture/Desktop/Hack-Your-Future-Exercise&projects/JavaScript/Homework-class39/3-UsingAPIs/helpers/pokerDiceRoller.js:64:16)
+    at Timeout._onTimeout (/Users/hackyourfuture/Desktop/Hack-Your-Future-Exercise&projects/JavaScript/Homework-class39/3-UsingAPIs/helpers/pokerDiceRoller.js:77:26)
+    at listOnTimeout (node:internal/timers:564:17)
+    at processTimers (node:internal/timers:507:7)
+
+Node.js v18.1.0
+2022-09-13 09:16:49 error: *** Spell Checker Report ***
+
+
+2022-09-13 09:18:17 info: --------------------------------------------
+2022-09-13 09:18:17 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-09-13 09:18:17 info: --------------------------------------------
+2022-09-13 09:18:23 info: All unit tests passed.
+2022-09-13 09:18:27 error: *** Spell Checker Report ***
+
+
+2022-09-13 09:19:12 info: ---------------------------------------
+2022-09-13 09:19:12 info: >>> Running Unit Test `ex1-johnWho` <<<
+2022-09-13 09:19:12 info: ---------------------------------------
+2022-09-13 09:19:17 info: All unit tests passed.
+2022-09-13 09:19:21 error: *** Spell Checker Report ***
+
+
+2022-09-13 09:20:05 info: -------------------------------------------------
+2022-09-13 09:20:05 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2022-09-13 09:20:05 info: -------------------------------------------------
+2022-09-13 09:20:11 info: All unit tests passed.
+2022-09-13 09:20:14 error: *** Spell Checker Report ***
+
+
+2022-09-13 09:20:49 info: ---------------------------------------
+2022-09-13 09:20:49 info: >>> Running Unit Test `ex3-rollDie` <<<
+2022-09-13 09:20:49 info: ---------------------------------------
+2022-09-13 09:20:54 info: All unit tests passed.
+2022-09-13 09:20:58 error: *** Spell Checker Report ***
+
+
+2022-09-13 09:21:38 info: --------------------------------------------
+2022-09-13 09:21:38 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-09-13 09:21:38 info: --------------------------------------------
+2022-09-13 09:21:44 info: All unit tests passed.
+2022-09-13 09:21:48 error: *** Spell Checker Report ***
+
+
+2022-09-13 09:22:37 info: ----------------------------------------------
+2022-09-13 09:22:37 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2022-09-13 09:22:37 info: ----------------------------------------------
+2022-09-13 09:22:42 info: All unit tests passed.
+2022-09-13 09:22:45 error: *** Spell Checker Report ***
+
+
