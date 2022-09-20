@@ -22,18 +22,67 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchData(url) {
+  const respond = await fetch(url);
+  if (respond.ok) {
+    return respond.json();
+  }
+  throw new Error(` error is ${respond.status}  : ${respond.statusText} `);
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function fetchAndPopulatePokemons(url) {
+  const button = document.createElement('button');
+  button.className = 'button';
+  button.textContent = 'Get Pokemons';
+  document.body.appendChild(button);
+  const select = document.createElement('select');
+  select.setAttribute('id', 'select');
+  document.body.appendChild(select);
+
+  button.addEventListener('click', async () => {
+    button.disabled = true;
+
+    const results = await fetchData(url);
+    const resultsList = results.results;
+    const arrayList = resultsList.map((ele) => ele.name);
+
+    for (let i = 0; i < arrayList.length; i++) {
+      const optionElement = document.createElement('option');
+
+      select.appendChild(optionElement);
+
+      optionElement.textContent = arrayList[i];
+      optionElement.id = arrayList[i];
+    }
+  });
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchImage(url) {
+  const results = await fetchData(url);
+  const resultsList = results.results;
+
+  const imgUrlList = resultsList.map((urlEle) => urlEle.url);
+  const imageElement = document.createElement('img');
+  imageElement.style.width = '200px';
+
+  document.body.appendChild(imageElement);
+
+  // imageElement.src = imgUrlList[2];
+  // console.log((imageElement.src = imgUrlList[2]));
+  // for (let i = 0; i < imgUrlList.length; i++) {
+  //   imageElement.src = imgUrlList[i];
+  // }
 }
 
-function main() {
-  // TODO complete this function
+async function main() {
+  const pokemonsUrl = 'https://pokeapi.co/api/v2/pokemon?limit=151';
+
+  try {
+    await fetchData(pokemonsUrl);
+    fetchAndPopulatePokemons(pokemonsUrl);
+    fetchImage(pokemonsUrl);
+  } catch (error) {
+    fetchAndPopulatePokemons(error.message);
+  }
 }
+window.addEventListener('load', main);
